@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "704779599443",
+    "project_id": "gym-buddy-7202c",
+    "storage_bucket": "gym-buddy-7202c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704779599443:android:e4b072a1b699cfb7d710a6",
+        "android_client_info": {
+          "package_name": "com.example.gym_buddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "704779599443-3b9ighenb0ato2f7cv5pftg8pkj34pjt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVdeMprUhdcncxVet-c4Acu4gZ5eX1fDY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "704779599443-3b9ighenb0ato2f7cv5pftg8pkj34pjt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "704779599443-9c4imcjdptg3m2fkv03sc3k9oao9cgjm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "gymwithbudz.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704779599443:android:5d0e188d834ba73dd710a6",
+        "android_client_info": {
+          "package_name": "com.gymwithbudz.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "704779599443-vgpv0tt1et8a044j1egi39u4qfvitatn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gymwithbudz.app",
+            "certificate_hash": "c505006a5f8e5543ec1daec8a7b5a7be1e32646b"
+          }
+        },
+        {
+          "client_id": "704779599443-3b9ighenb0ato2f7cv5pftg8pkj34pjt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVdeMprUhdcncxVet-c4Acu4gZ5eX1fDY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "704779599443-3b9ighenb0ato2f7cv5pftg8pkj34pjt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "704779599443-9c4imcjdptg3m2fkv03sc3k9oao9cgjm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "gymwithbudz.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
