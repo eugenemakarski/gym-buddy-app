@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:gym_buddy/routes.dart';
+import 'package:gym_buddy/shared/bottom_nav.dart';
 import 'package:gym_buddy/theme.dart';
 import 'firebase_options.dart';
 
@@ -19,9 +20,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: appTheme,
-      routes: appRoutes,
-    );
+        title: 'Flutter Demo',
+        theme: appTheme,
+        routes: appRoutes,
+        home: BottomNavBar());
   }
 }
