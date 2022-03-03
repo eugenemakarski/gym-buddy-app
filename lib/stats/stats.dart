@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../shared/bottom_nav.dart';
-
-class Stats extends StatelessWidget {
-  const Stats({Key? key}) : super(key: key);
+class StatsScreen extends StatelessWidget {
+  const StatsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("STATS"),
-    );
+    return const Text("STATS");
   }
 }

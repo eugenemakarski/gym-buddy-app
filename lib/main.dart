@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:gym_buddy/routes.dart';
-import 'package:gym_buddy/shared/bottom_nav.dart';
 import 'package:gym_buddy/theme.dart';
 import 'firebase_options.dart';
+import 'home/authenticator.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -23,6 +23,6 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: appTheme,
         routes: appRoutes,
-        home: BottomNavBar());
+        home: const Authenticator());
   }
 }

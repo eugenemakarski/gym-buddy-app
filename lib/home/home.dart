@@ -1,13 +1,61 @@
 import 'package:flutter/material.dart';
-import 'package:gym_buddy/shared/bottom_nav.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import '../gym/gym.dart';
+import '../stats/stats.dart';
+import '../summary/summary.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int _currentIndex = 0;
+  final List _pages = [
+    const SummaryScreen(),
+    const GymScreen(),
+    const StatsScreen()
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("HOME"),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("GymWithBudz"),
+      ),
+      body: _pages[_currentIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex,
+        selectedItemColor: const Color.fromARGB(255, 57, 166, 255),
+        backgroundColor: Colors.grey[900],
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(
+                FontAwesomeIcons.home,
+                size: 20,
+              ),
+              label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                FontAwesomeIcons.dumbbell,
+                size: 20,
+              ),
+              label: 'My Gym'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                FontAwesomeIcons.chartBar,
+                size: 20,
+              ),
+              label: 'Stats')
+        ],
+        onTap: (int index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+      ),
     );
   }
 }
