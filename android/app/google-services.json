@@ -7,42 +7,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:704779599443:android:e4b072a1b699cfb7d710a6",
-        "android_client_info": {
-          "package_name": "com.example.gym_buddy"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "704779599443-3b9ighenb0ato2f7cv5pftg8pkj34pjt.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDVdeMprUhdcncxVet-c4Acu4gZ5eX1fDY"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "704779599443-3b9ighenb0ato2f7cv5pftg8pkj34pjt.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "704779599443-9c4imcjdptg3m2fkv03sc3k9oao9cgjm.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "gymwithbudz.app"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:704779599443:android:5d0e188d834ba73dd710a6",
         "android_client_info": {
           "package_name": "com.gymwithbudz.app"
@@ -50,7 +14,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "704779599443-vgpv0tt1et8a044j1egi39u4qfvitatn.apps.googleusercontent.com",
+          "client_id": "704779599443-qatiuen64tgv2i2rqfq22v2bb8rik3j8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.gymwithbudz.app",
