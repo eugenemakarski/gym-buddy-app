@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 var appTheme = ThemeData(
-    brightness: Brightness.dark,
+    brightness: Brightness.light,
     textTheme: const TextTheme(
         headline1: TextStyle(fontSize: 24),
         subtitle1: TextStyle(fontSize: 20),

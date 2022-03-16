@@ -17,8 +17,9 @@ class UserData {
     this.gymId = '',
   });
 
-  factory UserData.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
-  Map<String, dynamic> toJson() => _$UserToJson(this);
+  factory UserData.fromJson(Map<String, dynamic> json) =>
+      _$UserDataFromJson(json);
+  Map<String, dynamic> toJson() => _$UserDataToJson(this);
 }
 
 @JsonSerializable()
@@ -43,6 +44,62 @@ class Weight {
   Map<String, dynamic> toJson() => _$WeightToJson(this);
 }
 
-class Gym {}
+@JsonSerializable()
+class Gym {
+  final int capacity;
+  final String description;
+  final String gymName;
+  final List<String> users;
+  final List<String> workouts;
 
-class Exercise {}
+  Gym({
+    this.capacity = 0,
+    this.description = '',
+    this.gymName = '',
+    this.users = const [""],
+    this.workouts = const [""],
+  });
+
+  factory Gym.fromJson(Map<String, dynamic> json) => _$GymFromJson(json);
+  Map<String, dynamic> toJson() => _$GymToJson(this);
+}
+
+@JsonSerializable()
+class Workout {
+  final String gymId;
+  final String name;
+  final List<Exercise> exercises;
+
+  Workout(this.exercises, {this.gymId = "", this.name = ""});
+
+  factory Workout.fromJson(Map<String, dynamic> json) =>
+      _$WorkoutFromJson(json);
+  Map<String, dynamic> toJson() => _$WorkoutToJson(this);
+}
+
+@JsonSerializable()
+class Exercise {
+  final String name;
+  final List<WorkoutSet> sets;
+
+  Exercise(this.sets, {this.name = ""});
+
+  factory Exercise.fromJson(Map<String, dynamic> json) =>
+      _$ExerciseFromJson(json);
+  Map<String, dynamic> toJson() => _$ExerciseToJson(this);
+}
+
+@JsonSerializable()
+class WorkoutSet {
+  final int reps;
+  final Weight weight;
+
+  WorkoutSet(
+    this.weight, {
+    this.reps = 0,
+  });
+
+  factory WorkoutSet.fromJson(Map<String, dynamic> json) =>
+      _$WorkoutSetFromJson(json);
+  Map<String, dynamic> toJson() => _$WorkoutSetToJson(this);
+}

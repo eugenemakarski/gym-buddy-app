@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:gym_buddy/services/auth.dart';
 import 'package:gym_buddy/services/models.dart';
@@ -25,6 +24,23 @@ class FirestoreService {
           UserData(Height(unit: "", value: ""), Weight(unit: "", value: 0))
         ]);
       }
+    });
+  }
+
+  Stream<Gym> gymStream() {
+    return AuthService().userStream.switchMap((user) {
+      return _db
+          .collection('Gyms')
+          .where('users', arrayContains: user!.uid)
+          .snapshots()
+          .map((snapshot) => Gym.fromJson(snapshot.docs.first.data()));
+    });
+  }
+
+  Stream<Workout> workoutStream() {
+    return AuthService().userStream.switchMap((user) {
+      var ref = _db.collection('Workouts').doc('cvyvzHjWTtKm8ZwCEk9c');
+      return ref.snapshots().map((doc) => Workout.fromJson(doc.data()!));
     });
   }
 }

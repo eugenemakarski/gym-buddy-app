@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:gym_buddy/workouts/workouts.dart';
 import '../gym/gym.dart';
 import '../stats/stats.dart';
-import '../summary/summary.dart';
+import '../workouts/workouts.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -14,8 +15,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _currentIndex = 0;
   final List _pages = [
-    const SummaryScreen(),
     const GymScreen(),
+    const WorkoutScreen(),
     const StatsScreen()
   ];
 
@@ -42,7 +43,7 @@ class _HomeState extends State<Home> {
                 FontAwesomeIcons.dumbbell,
                 size: 20,
               ),
-              label: 'My Gym'),
+              label: 'Workouts'),
           BottomNavigationBarItem(
               icon: Icon(
                 FontAwesomeIcons.chartBar,
